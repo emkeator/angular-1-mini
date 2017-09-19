@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="friendsList">
+    <head>
+        <title>DevMtn Cohort 26: Angular 1 Mini-Project</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./css/styles.css" rel="stylesheet">
+    </head>
+    <body ng-controller="mainCtrl">
+
+        <h1>My Friends</h1>
+
+        New Friend: <input ng-model="newFriend" type="text"/>
+        <button ng-click="addFriend(newFriend)">Add Friend</button>
+        <div ng-repeat="friend in friends">
+            <p>{{ friend }}</p>
+        </div>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+        <script src="./js/app.js"></script>
+        <script src="./js/mainCtrl.js"></script>        
+    </body>
+</html>
